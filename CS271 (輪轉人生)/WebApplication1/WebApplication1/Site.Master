@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="zh">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - 我的 ASP.NET  應用程式</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style>
+        .C{
+            padding:75px 0;
+            margin:0 auto;
+            width:800px;
+          }
+
+        .G{
+            display:flex;
+            flex-direction:row;
+            width:100%;
+            height:70vh;
+            background-color:pink;
+          }
+
+        .T{
+            flex:1;   
+            background-position:center;  
+            background-size:cover;
+            background-repeat:none;
+            transition:all 0.8s ease;      
+            height:100%;
+            background-color:lightblue;
+          }
+
+        .T:hover{
+            flex:6;           
+          }
+
+        .T:first-of-type{
+            background-image:url("http://tinyurl.com/y57dm9oy")       
+          }
+
+        .T:nth-of-type(2){
+             background-image:url("http://tinyurl.com/y33spbet")           
+          }
+
+         .T:nth-of-type(3){
+             background-image:url("https://tinyurl.com/yyjy2d2b")           
+          }
+
+        .T:nth-of-type(4){
+             background-image:url("http://tinyurl.com/y6hc86kc")           
+          }
+
+        .T:last-of-type{
+             background-image:url("http://tinyurl.com/y37zzl4a")           
+          }
+    </style>
+</head>
+<body>
+    <div class="C">
+
+    
+    <div class="G">
+        <div class="T"></div>
+            <div class="T"></div>
+                 <div class="T"></div>
+                    <div class="T"></div>
+                        <div class="T"></div>
+                            
+    </div>
+    <form runat="server">
+    </div>
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--如需了解 ScriptManager 的搭配指令碼，請參閱 http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--架構指令碼--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--網站指令碼--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+       
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+    </form>
+</body>
+</html>
